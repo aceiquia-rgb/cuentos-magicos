@@ -1,0 +1,387 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+
+/* El cuerpo global de la página */
+body {
+  margin: 0; /*++++ Reseteamos a 0 el margen predeterminado del navegador para que el diseño empiece pegado al borde sin huecos blancos */
+  padding: 0; /*++++ Reseteamos el relleno a 0 para asegurar coherencia en todos los navegadores */
+  font: 12px Arial, Tahoma, Verdana, sans-serif;
+  background-color: #f7f3e9; /*++++ Cambiamos el fondo a tono crema pergamino para dar estética de cuento y cansar menos la vista que el blanco puro */
+  color: #333333; /*++++ Establecemos un color gris oscuro para los textos que garantiza buen contraste sobre fondos claros */
+}
+
+/* La caja general que contiene todo el diseño */
+#wrapper {
+  width: 100%;
+  margin: 20px auto; /*++++ Añadimos 20px arriba y abajo y centrado automático a los lados para separar la maqueta del borde superior de la ventana */
+  background-color: #ffffff; /*++++ Fondo blanco para el contenido interior para destacar claramente sobre el fondo crema general */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /*++++ Sombra perimetral suave para darle profundidad tridimensional al libro/cuento */
+}
+
+/* El bloque de la cabecera superior */
+#header {
+  height: auto; /*++++ Cambiamos de 150px fijo a auto para que la altura se adapte de forma natural al título y al subtítulo sin pasarse */
+  background: #ffeaa7; /*++++ Ajustamos a un amarillo pastel cálido más acorde con el resto de la paleta */
+  width: 100%; /*++++ Nos aseguramos de que ocupe todo el ancho disponible del wrapper */
+  text-align: center; /*++++ Centramos horizontalmente el título y el lema para equilibrar la cabecera */
+  padding: 25px 0; /*++++ Añadimos relleno de 25px arriba y abajo para que el texto respire holgadamente */
+  border-bottom: 3px solid #fdcb6e; /*++++ Separador dorado en la base para delimitar limpiamente la cabecera del menú */
+  box-sizing: border-box; /*++++ Incluimos el padding en el cálculo de anchura para evitar desbordamientos horizontales */
+}
+
+/* El título principal dentro de la cabecera */
+#header strong {
+  font-family: 'UnifrakturCook', cursive, serif; /*++++ Aplicamos la fuente gótica medieval vinculada en el HTML para la temática de cuentos mágicos */
+  font-size: 65px; /*++++ Ajustamos el tamaño a 65px para que quepa en una sola línea elegante en lugar de los 100px que forzaban saltos de línea */
+  letter-spacing: 2px; /*++++ Espaciado entre caracteres para que los trazos góticos complejos no se apelmacen y se lean bien */
+  color: #2d3436; /*++++ Color gris pizarra oscuro para ofrecer máxima nitidez sobre el fondo amarillo pastel */
+  display: block; /*++++ Lo convertimos en bloque para que ocupe su propia línea y el subtítulo caiga debajo de forma limpia */
+}
+
+/* El lema o subtítulo explicativo de la cabecera */
+#header span {
+  font-size: 16px; /*++++ Tamaño legible de 16px para el eslogan secundario */
+  font-style: italic; /*++++ Texto en cursiva para darle un toque literario elegante */
+  color: #636e72; /*++++ Tono gris medio para jerarquizarlo visualmente por debajo del título principal */
+}
+
+/* El bloque contenedor de la barra de navegación */
+#cssmenu {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-size: 14px; /*++++ Subimos de 10px a 14px para que los botones del menú se lean sin forzar la vista aunque solo dejemos 1 px entre lineas*/
+  line-height: 15px;
+  text-transform: uppercase;
+  text-align: left;
+  background-color: #2d3436; /*++++ Fondo oscuro para integrar la barra de menú con el diseño moderno */
+}
+
+/* La lista no ordenada que contiene los botones del menú */
+#cssmenu > ul {
+  width: auto;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background: #2d3436; /*++++ Cambiamos de blanco a gris oscuro para que los botones destaquen sobre la barra */
+  border: 1px solid #ece6e8;
+  border-bottom: 3px solid #d9ced2;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+
+/* Pestaña especial para móviles que en PC no se muestra */
+#cssmenu > ul li#responsive-tab {
+  display: none;
+}
+
+/* Cada uno de los botones de la barra */
+#cssmenu > ul li {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+
+/* Por si queremos mandar algún botón al extremo derecho */
+#cssmenu > ul li.right {
+  float: right;
+}
+
+/* El botón que guarda un desplegable debajo */
+#cssmenu > ul li.has-sub {
+  position: relative;
+}
+
+/* Cuando pasamos el ratón por encima del botón */
+#cssmenu > ul li.has-sub:hover ul {
+  display: block;
+}
+
+/* El cajón flotante que contiene las opciones del desplegable */
+#cssmenu > ul li.has-sub ul {
+  display: none;
+  width: 220px; /*++++ Ajustamos de 250px a 220px para que el desplegable sea más proporcionado a los textos */
+  position: absolute;
+  top: 100%; /*++++ Asegura que el desplegable arranque exactamente donde termina la barra del menú sin solaparse */
+  left: 0; /*++++ Alinea el desplegable al milímetro con el margen izquierdo de su botón padre */
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background: #ffffff;
+  border: 1px solid #dcdde1; /*++++ Borde suave homogéneo para definir el marco del desplegable */
+  border-bottom: 3px solid #d9ced2;
+  border-top: 0 none;
+  z-index: 1000; /*++++ Asegura que el desplegable flote por encima de vídeos, imágenes y textos sin que nada lo tape */
+}
+
+/* Cada una de las opciones dentro del submenú desplegable */
+#cssmenu > ul li.has-sub ul li {
+  display: block;
+}
+
+/* Enlace dentro de cada elemento desplegable */
+#cssmenu > ul li.has-sub ul li a {
+  display: block; /*++++ Todo el renglón es clicable */
+  padding: 10px 15px; /*++++ Espacio cómodo para pulsar con el ratón */
+  text-decoration: none; /*++++ Sin subrayado */
+  color: #2f3640; /*++++ Color oscuro para leer bien sobre el fondo blanco del desplegable */
+  font-size: 13px; /*++++ Tamaño un pelín más compacto para los subapartados */
+  border-bottom: 1px solid #f1f2f6; /*++++ Línea divisoria muy suave entre opciones secundarias */
+}
+
+/* Hover de los elementos del submenú */
+#cssmenu > ul li.has-sub ul li a:hover {
+  background-color: #ff7675; /*++++ Color salmón/rojo claro al pasar el ratón por el submenú */
+  color: #ffffff; /*++++ Letras en blanco para contrastar con el fondo salmón */
+}
+
+/* El enlace del botón que tiene desplegable debajo */
+#cssmenu > ul li.has-sub > a {
+  background-image: url('images/caret.png');
+  background-repeat: no-repeat;
+  background-position: 90% -95%;
+}
+
+/* Estilo para la pestaña con flecha cuando está activa / hover */
+#cssmenu > ul li.has-sub > a.active,
+#cssmenu > ul li.has-sub > a:hover {
+  background: #d63031 url('images/caret.png') no-repeat; /*++++ Rojo de acción homogéneo con la marca */
+  background-position: 90% 195%;
+}
+
+/* Enlaces normales de los botones del menú */
+#cssmenu > ul li a {
+  display: block;
+  padding: 14px 20px; /*++++ Subimos ligeramente el padding para que el botón sea más alto y cómodo de pulsar */
+  text-decoration: none;
+  color: #dfe6e9; /*++++ Cambiamos a gris claro sobre fondo oscuro para máxima legibilidad */
+  font-weight: bold; /*++++ Negrita para dar empaque a los títulos de la botonera */
+  text-shadow: none; /*++++ Eliminamos la sombra de texto blanca antigua para un estilo limpio moderno */
+}
+
+/* Enlace del botón activo en el que estamos / hover */
+#cssmenu > ul li a.active,
+#cssmenu > ul li a:hover {
+  background: #d63031; /*++++ Color rojo vivo para indicar sección activa o interactuada */
+  color: #fff;
+  text-shadow: none; /*++++ Quitamos la sombra negra para no ensuciar la tipografía moderna */
+}
+
+/* Reglas especiales cuando la pantalla mide 600px o menos */
+@media (max-width: 600px) {
+  #cssmenu > ul {
+    width: 100%;
+  }
+
+  #cssmenu > ul li#responsive-tab {
+    display: block;
+  }
+
+  #cssmenu > ul li#responsive-tab a {
+    background: url('images/menu.png') no-repeat;
+    background-position: 95% -35%;
+  }
+
+  #cssmenu > ul li#responsive-tab a:hover {
+    background-color: #d63031; /*++++ Rojo de marca unificado */
+    background-position: 95% 135%;
+  }
+
+  #cssmenu > ul li {
+    display: none;
+  }
+
+  #cssmenu > ul li.right {
+    float: none;
+  }
+
+  #cssmenu > ul li.has-sub {
+    position: relative;
+  }
+
+  #cssmenu > ul li.has-sub ul {
+    display: block;
+    position: static;
+    width: 100%;
+    background: #ffffff;
+    border: 0 none;
+  }
+
+  #cssmenu > ul li.has-sub ul li {
+    display: block !important;
+  }
+
+  #cssmenu > ul li.has-sub ul li a span {
+    display: block;
+    padding-left: 24px;
+  }
+
+  #cssmenu > ul li.has-sub > a {
+    background-image: none;
+  }
+}
+
+/* Reglas para pantallas de más de 600px */
+@media (min-width: 600px) {
+  #cssmenu > ul > li.collapsed {
+    display: inline-block !important;
+    *display: inline;
+    zoom: 1;
+  }
+
+  #cssmenu > ul ul li.collapsed {
+    display: block !important;
+  }
+}
+
+/* Contenedor central que aloja las dos columnas */
+#middle {
+  width: 100%;
+  background-color: #ffffff; /*++++ Cambiamos de grey a blanco para eliminar el fondo tosco y dar sensación limpia */
+}
+
+/* Panel izquierdo principal para el contenido */
+#content {
+  width: 70%; /*++++ Le damos 70% y asi le damos 30% al derecho donde ubicaremos los vídeos */
+  float: left;
+  background-color: #fafafa; /*++++ Cambiamos de grey a gris muy suave (#fafafa) para una lectura cómoda de los textos y formularios */
+  padding: 10px; 
+  box-sizing: border-box; /*++++ Incluimos el padding en el ancho para evitar que la columna derecha baje de línea */
+}
+
+/* Panel lateral derecho */
+#sideRight {
+  float: left;
+  width: 30%; /*++++ Ampliamos 30% para que los reproductores de vídeo y fotos tengan un ancho útil y visible */
+  background: #ffeaa7; /*++++ Cambiamos de rosa #FFACAA al amarillo pastel para coordinar con la cabecera */
+  padding: 20px; /*++++ Añadimos 20px de padding para que los vídeos y testimonios no toquen las paredes */
+  box-sizing: border-box; /*++++ Mantiene la anchura */
+  border-left: 2px dashed #e17055; /*++++ Añadimos línea divisoria discontinua con estilo artesanal entre ambas columnas */
+}
+
+/* Estilos de elementos multimedia (imágenes y vídeos) */
+.media-box { /*++++ Nuevo contenedor de soporte para centrar y ordenar las fotos y vídeos */
+  margin: 15px 0; /*++++ Separación vertical entre párrafos e imágenes */
+  text-align: center; /*++++ Centra los elementos multimedia en sus columnas */
+}
+
+.media-box img { /*++++ Regla para las imágenes de la web */
+  max-width: 100%; /*++++ Evita que las imágenes se desborden de su columna correspondiente */
+  height: auto; /*++++ Mantiene la proporción de aspecto original de la imagen sin deformarla */
+  border-radius: 6px; /*++++ Suavizamos las esquinas */
+}
+
+.media-box video { /*++++ Regla para los vídeos insertados */
+  width: 100%; /*++++ Hace que el reproductor de vídeo ocupe todo el ancho disponible de la barra lateral */
+  border-radius: 6px; /*++++ Esquinas redondeadas coordinadas con las fotos */
+}
+
+/* Formularios dentro de content o sidebar */
+.custom-form { /*++++ Caja de formulario para subir la foto y pedir el cuento */
+  background: #ffffff; /*++++ Fondo blanco para destacar sobre el gris de content */
+  padding: 15px; /*++++ Espacio interior holgado */
+  border: 1px solid #dfe6e9; /*++++ Borde de contorno suave */
+  border-radius: 6px; /*++++ Bordes redondeados */
+  margin-top: 15px; /*++++ Separación con el texto superior */
+}
+
+.custom-form b { /*++++ Textos en negrita usados como títulos de cada campo del formulario */
+  display: block; /*++++ Forzamos a que actúe como bloque para que ocupe toda la línea y el campo caiga justo debajo */
+  margin-bottom: 5px; /*++++ Añadimos 5px de separación inferior para que la etiqueta no quede pegada al recuadro */
+  font-weight: bold; /*++++ Reafirmamos la negrita para asegurar contraste y jerarquía visual en todos los navegadores */
+}
+
+.custom-form input[type="text"], /*++++ Campos de texto */
+.custom-form input[type="email"], /*++++ Campos de email */
+.custom-form input[type="file"], /*++++ Selector de archivo para la foto */
+.custom-form textarea, /*++++ Área de dedicatoria */
+.custom-form select { /*++++ Selector de temática */
+  width: 100%; /*++++ Ocupan el 100% del formulario */
+  padding: 8px; /*++++ Espacio interior cómodo para escribir */
+  margin-bottom: 12px; /*++++ Distancia con el siguiente campo */
+  border: 1px solid #ccc; /*++++ Borde gris neutro */
+  border-radius: 4px; /*++++ Suavizado de bordes */
+  box-sizing: border-box; /*++++ No desborda el formulario */
+}
+
+.custom-form button { /*++++ Botón de acción para generar la maqueta */
+  background-color: #d63031; /*++++ Rojo de llamada a la acción */
+  color: #fff; /*++++ Texto blanco contrastado */
+  padding: 10px 18px; /*++++ Botón amplio y fácil de pulsar */
+  border: none; /*++++ Sin bordes por defecto */
+  border-radius: 4px; /*++++ Esquinas redondeadas */
+  cursor: pointer; /*++++ Cursor de puntero al pasar por encima */
+  font-size: 14px; /*++++ Letra clara */
+  font-weight: bold; /*++++ Negrita */
+}
+
+.custom-form button:hover { /*++++ Interacción del botón */
+  background-color: #b71540; /*++++ Tono más oscuro al pasar el ratón */
+}
+
+/* Tabla de tarifas */
+.tarifa-table { /*++++ Estructura para la página de precios */
+  width: 100%; /*++++ Ocupa el ancho completo de la sección */
+  border-collapse: collapse; /*++++ Unifica bordes dobles */
+  margin: 15px 0; /*++++ Margen superior e inferior */
+}
+
+.tarifa-table th, .tarifa-table td { /*++++ Celdas de la tabla */
+  border: 1px solid #dcdde1; /*++++ Línea gris clara de separación */
+  padding: 10px; /*++++ Relleno para que los datos no se amontonen */
+  text-align: left; /*++++ Alineación a la izquierda */
+}
+
+.tarifa-table th { /*++++ Fila de cabecera de la tabla */
+  background-color: #2d3436; /*++++ Fondo oscuro coherente con el menú */
+  color: #ffffff; /*++++ Letras blancas */
+}
+
+.tarifa-table tr:nth-child(even) { /*++++ Filas pares */
+  background-color: #f1f2f6; /*++++ Fondo gris alterno para lectura cómoda */
+}
+
+/* Bloque de pie de página */
+#footer {
+  width: 100%; /*++++ Asegura que el footer cubra el ancho */
+  float: none; /*++++ Anulamos float:left para evitar descuadres con los floats anteriores */
+  clear: both; /*++++ Cambiamos de clear:left a clear:both para limpiar cualquier flotado a ambos lados */
+  height: auto; /*++++ Cambiamos de 60px fijo a auto para albergar el texto legal y los iconos de redes sociales */
+  background: #2d3436; /*++++ Cambiamos el verde pistacho #BFF08E al gris pizarra oscuro coordinado con el menú */
+  color: #dfe6e9; /*++++ Letra gris clara legible sobre fondo oscuro */
+  text-align: center; /*++++ Centra los párrafos y los iconos de redes */
+  padding: 20px 0; /*++++ Altura interior adecuada para un pie moderno */
+  font-size: 13px; /*++++ Tamaño discreto para créditos legales */
+}
+
+/* Marca resaltada en el pie */
+#footer strong {
+  color: #fab1a0; /*++++ Tono melocotón suave para destacar la marca */
+}
+
+/* Párrafos del pie */
+#footer p {
+  margin: 6px 0; /*++++ Margen vertical comedido para no alargar el pie en exceso */
+  line-height: 1.4; /*++++ Altura de línea para que las oraciones no queden pegadas */
+}
+
+/* Contenedor de redes sociales */
+#footer .footer-redes {
+  margin: 12px 0; /*++++ Espacio de separación arriba y abajo respecto al texto */
+  text-align: center; /*++++ Iconos perfectamente centrados en la pantalla */
+}
+
+/* Iconos de Instagram, TikTok y Facebook */
+#footer .footer-redes img {
+  width: 100px; /*++++ Tamaño uniforme de ancho para los tres logotipos */
+  height: 100px; /*++++ Altura fija equivalente */
+  object-fit: contain; /*++++ Evita que los logos se achaten o estiren */
+  margin: 0 8px; /*++++ Separación horizontal entre icono e icono */
+  vertical-align: middle; /*++++ Alineados todos en el mismo eje medio */
+  display: inline-block; /*++++ Colocados en hilera horizontal centrada */
+  border-radius: 6px; /*++++ Esquinas suavizadas */
+  transition: transform 0.2s ease; /*++++ Efecto de transición suave al pasar el ratón */
+}
+
+#footer .footer-redes img:hover {
+  transform: scale(1.15); /*++++ Crece un 15% al pasar el ratón para dar sensación de interactividad */
+}

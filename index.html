@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Le decimos al navegador que use caracteres en espanol (tildes, enes.) para que no salgan cosas raras -->
+    <meta charset="UTF-8">
+    <!-- El nombre que sale arriba en la pestana del navegador para no perderse -->
+    <title>Cuentos Personalizados - Envía tu foto y crea tu historia</title>
+    <!-- Enganchamos el archivo CSS de siempre para que esto tenga color y no parezca de los anos 90 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Conectamos con Google Fonts para traernos la fuente chula estilo medieval -->
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+     <!-- Script para los menus -->
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <!-- La caja tocha que envuelve toda la pagina y la centra en la pantalla -->
+    <div id="wrapper">
+        
+        <!-- El cartelon de arriba del todo para que quede claro de que va el negocio -->
+        <div id="header">
+            <strong>Cuentos Mágicos</strong>
+            <span>Envíanos tu foto y creamos una aventura única para ti</span>
+        </div>
+
+        <!-- La barra del menu con sus pestanas y submenus que caen solos al pasar el raton -->
+        <div id="cssmenu">
+            <ul>
+                <!-- La pestana donde estamos ahora mismo metidos (Inicio) -->
+                <li><a href="index.html" class="active"><span>Inicio</span></a></li>
+                <!-- Pestana con desplegable para explicar la info por dentro -->
+                <li class="has-sub"><a href="html/info.html"><span>Información</span></a>
+                    <ul>
+                        <li><a href="html/info.html#como-funciona"><span>¿Cómo funciona?</span></a></li>
+                        <li><a href="html/info.html#estilos"><span>Estilos de ilustración</span></a></li>
+                        <li class="last"><a href="html/info.html#formatos"><span>Formatos impresos y PDF</span></a></li>
+                    </ul>
+                </li>
+                <!-- Pestana con desplegable para ver fotos y videos de muestra -->
+                <li class="has-sub"><a href="html/galeria.html"><span>Galería</span></a>
+                    <ul>
+                        <li><a href="html/galeria.html#ejemplos-fotos"><span>Fotos transformadas</span></a></li>
+                        <li class="last"><a href="html/galeria.html#muestras-video"><span>Vídeo demostraciones</span></a></li>
+                    </ul>
+                </li>
+                <!-- El boton para ir a ver cuanto cuesta la broma -->
+                <li><a href="html/tarifas.html"><span>Tarifas</span></a></li>
+                <!-- El ultimo boton por si alguien nos quiere mandar un mensaje -->
+                <li class="last"><a href="html/contacto.html"><span>Contacto</span></a></li>
+            </ul>
+        </div>
+
+        <!-- El bloque del medio que reparte la pantalla en dos columnas: lo gordo a la izquierda y el lateral a la derecha -->
+        <div id="middle">
+            
+            <!-- Columna ancha de la izquierda: el meollo del asunto, la foto principal y el formulario para pillar pedidos -->
+            <div id="content">
+                <h2>Conviértete en el protagonista de tu propia leyenda</h2>
+                <p>
+                    Transformamos cualquier retrato en una obra de arte ilustrada. Ya sea para un cumpleaños,
+                    un regalo de comunión o una sorpresa romántica, nuestros ilustradores y guionistas crean un libro de tapa dura donde tú, tu hijo o tu mascota seréis los héroes.
+                </p>
+
+                <!-- La foto del libro abierto para poner los dientes largos al que entra -->
+                <div class="media-box">
+                    <img src="images/img1.jpg" alt="Muestra de cuento personalizado img1">
+                </div>
+
+                <h3>Pide tu cuento hoy mismo</h3>
+                <p>Sube la foto que quieres transformar y dinos qué temática prefieres:</p>
+
+                <!-- El formulario donde la gente rellena los datos y suelta la pasta/foto -->
+                <form class="custom-form" action="#" method="post">
+                    <!-- Casilla para meter el nombre del crio o del homenajeado -->
+                    <b>Nombre del protagonista:</b>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Lucas o Sofía" required>
+
+                    <!-- Desplegable para que elijan si prefieren dragones, marcianos o superheroes -->
+                    <b>Elige la temática mágica:</b>
+                    <select>
+                        <option value="fantasia">Castillos y Dragones</option>
+                        <option value="espacio">Viaje Intergaláctico</option>
+                        <option value="bosque">El Bosque Encantado</option>
+                        <option value="superheroes">Academia de Superhéroes</option>
+                    </select>
+
+                    <!-- El boton para que suban desde el movil o el ordenador la foto de la cara -->
+                    <b>Sube aquí tu foto (primer plano):</b>
+                    <input type="file" id="foto" name="foto" required>
+
+                    <!-- Un cajon grande de texto por si quieren meter una dedicatoria bonica -->
+                    <b>Dedicatoria inicial opcional:</b>
+                    <textarea rows="3" placeholder="Para nuestro pequeño explorador con todo el amor."></textarea>
+
+                    <!-- El boton de accion para enviar el formulario -->
+                    <button type="submit">Generar Maqueta Previa</button>
+                </form>
+            </div>
+
+            <!-- Columna estrecha de la derecha: video molon y una resena para dar confianza -->
+            <div class="sidebar" id="sideRight">
+                <h3>Así se crea la magia</h3>
+                <p>Mira cómo convertimos una simple fotografía en un personaje de cuento:</p>
+
+                <div class="media-box">
+                    <video controls> 
+                        <source src="images/video1.mp4" type="video/mp4">
+                        Tu navegador no soporta reproducción de vídeo.
+                    </video>
+                </div>
+
+                <hr>
+                <!-- La tipica opinion de 5 estrellas que nos farmea aura -->
+                <strong>Opinión de clientes:</strong>
+                <p><em>"Le regalamos el cuento a mi sobrino con su foto de pirata y no se separa de él. La calidad del papel es fabulosa."</em></p>
+                <small>— Laura M., Zaragoza</small>
+            </div>
+
+        </div>
+        <!-- El pie de pagina con los logos de redes sociales en el centro y las advertencias legales porsi ocaso -->
+        <div id="footer">
+            <!-- La firma de la casa con el ano -->
+            <p><strong>Cuentos Mágicos Personalizados</strong> 2026. Todos los derechos reservados.</p>
+            
+            <!-- La caja donde juntamos los tres botones de redes sociales bien centrados -->
+            <div class="footer-redes">
+                <!-- Enlace al Instagram postureta, abriendo pestana nueva para que no nos cierren la web -->
+                <a href="https://www.instagram.com" target="_blank" >
+                    <img src="images/Instagramlogo.svg.webp">
+                </a>
+                <!-- El salto a TikTok con sus bailoteos, tambien en ventana aparte -->
+                <a href="https://www.tiktok.com" target="_blank" >
+                    <img src="images/TikTokLogo.png">
+                </a>
+                <!-- El boton de Facebook para los mas clasicos de la familia -->
+                <a href="https://www.facebook.com" target="_blank" >
+                    <img src="images/facebooklogo.jpg">
+                </a>
+            </div>
+
+            <!-- Mensajito tranquilizador para que la gente no piense que vamos a vender su cara por internet -->
+            <p>Tus fotos son procesadas de forma privada y segura exclusivamente para la maquetación de tu encargo.</p>
+        </div>
+
+    </div>
+</body>
+</html>

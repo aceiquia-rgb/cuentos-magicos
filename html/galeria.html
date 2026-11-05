@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Galería de Muestras - Cuentos Mágicos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        
+        <!-- Cabecera principal -->
+        <div id="header">
+            <strong>Cuentos Mágicos</strong>
+            <br>
+            <span>Galería visual de trabajos entregados y aventuras terminadas</span>
+        </div>
+
+        <!-- Menu con la pestana de Galeria activa -->
+        <div id="cssmenu">
+            <ul>
+                <!-- La pestana donde estamos ahora mismo metidos (Inicio) -->
+                <li><a href="../index.html"><span>Inicio</span></a></li>
+                <!-- Pestana con desplegable para explicar la info por dentro -->
+                <li class="has-sub"><a href="info.html"><span>Información</span></a>
+                    <ul>
+                        <li><a href="info.html#como-funciona"><span>¿Cómo funciona?</span></a></li>
+                        <li><a href="info.html#estilos"><span>Estilos de ilustración</span></a></li>
+                        <li class="last"><a href="info.html#formatos"><span>Formatos impresos y PDF</span></a></li>
+                    </ul>
+                </li>
+                <!-- Pestana con desplegable para ver fotos y videos de muestra -->
+                <li class="has-sub"><a href="galeria.html" class="active"><span>Galería</span></a>
+                    <ul>
+                        <li><a href="galeria.html#ejemplos-fotos"><span>Fotos transformadas</span></a></li>
+                        <li class="last"><a href="galeria.html#muestras-video"><span>Vídeo demostraciones</span></a></li>
+                    </ul>
+                </li>
+                <!-- El boton para ir a ver cuanto cuesta la broma -->
+                <li><a href="tarifas.html"><span>Tarifas</span></a></li>
+                <!-- El ultimo boton por si alguien nos quiere mandar un mensaje -->
+                <li class="last"><a href="contacto.html"><span>Contacto</span></a></li>
+            </ul>
+        </div>
+
+        <div id="middle">
+            
+            <!-- Columna principal con fotos de antes/despues y el video hojeando el cuento -->
+            <div id="content">
+                <h2 id="ejemplos-fotos">Ejemplos: De foto real a personaje de leyenda</h2>
+                <p>Aquí puedes observar la fidelidad con la que trasladamos los rasgos de las fotos a las páginas del libro:</p>
+
+                <!-- Comparativa 1: Foto real y su version ilustrada -->
+                <div class="media-box">
+                    <img src="../images/img5.jpeg" alt="Antes y después de ilustración img5">
+                    <p><em>Ejemplo 1: Clara convertida en el Hada del Bosque Encantado</em></p>
+                </div>
+
+                <!-- Muestra 2: Acabado fisico de tapas y lomo -->
+                <div class="media-box">
+                    <img src="../images/img2.jpeg" alt="Detalle de encuadernación img6">
+                    <p><em>Ejemplo 2: Carlos rodeado de luciernagas </em></p>
+                </div>
+
+                <!-- Seccion de video de muestra hojeando el libro fisico -->
+                <h2 id="muestras-video">Vídeo de hojeo de libro</h2>
+                <p>Observa el tacto, el grosor de las páginas y la viveza de los colores en esta toma :</p>
+
+                <!-- Reproductor del tercer video -->
+                <div class="media-box">
+                    <video controls>
+                        <source src="../images/video2.mp4" type="video/mp4">
+                        Tu navegador no soporta vídeo.
+                    </video>
+                </div>
+            </div>
+
+            <!-- Columna lateral con foto del taller artesanal -->
+            <div class="sidebar" id="sideRight">
+                <h3>Detalles de imprenta</h3>
+                <div class="media-box">
+                    <img src="../images/img7.jpeg">
+                </div>
+                <p>Impresión con tintas ecológicas no tóxicas, encuadernación cosida y materiales certificados para los más pequeños.</p>
+            </div>
+
+        </div>
+
+        <!-- Pie de pagina con creditos e iconos sociales -->
+        <div id="footer">
+            <p><strong>Cuentos Mágicos Personalizados</strong> 2026. Todos los derechos reservados.</p>
+            <div class="footer-redes">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../images/Instagramlogo.svg.webp">
+                </a>
+                <a href="https://www.tiktok.com" target="_blank">
+                    <img src="../images/TikTokLogo.png">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../images/facebooklogo.jpg">
+                </a>
+            </div>
+            <p>Tus fotos son procesadas de forma privada y segura exclusivamente para la maquetación de tu encargo.</p>
+        </div>
+
+    </div>
+</body>
+</html>

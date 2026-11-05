@@ -1,0 +1,282 @@
+/* Nos traemos la fuente Open Sans de Google para tener una letra limpia si hace falta */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+
+/* El cuerpo entero de la web: reseteamos márgenes y ponemos fondo crema para que no ciegue el blanco puro */
+body {
+    margin: 0; /* Quitamos el margen tonto que traen los navegadores por defecto */
+    padding: 0; /* Sin relleno para que todo empiece bien pegado al borde */
+    font-family: Arial, Tahoma, Verdana, sans-serif; /* Fuentes comunes que tiene todo hijo de vecino en su PC */
+    background-color: #f7f3e9; /* Tono beige suave estilo pergamino */
+    color: #333333; /* Gris oscuro para el texto, que cansa menos la vista que el negro puro */
+}
+
+/* El cajón grande que envuelve toda la página */
+#wrapper {
+    width: 960px; /* Anchura fija clásica para que no se desmadre en pantallas grandes */
+    margin: 20px auto; /* 20 píxeles de aire arriba/abajo y centrado solito a los lados */
+    background-color: #ffffff; /* Fondo blanco impoluto para que resalte sobre el fondo de la pantalla */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Sombra elegante alrededor para darle relieve de libro */
+}
+
+/* El cartelón de la cabecera */
+#header {
+    background-color: #ffeaa7; /* Amarillo pastel suave */
+    width: 100%; /* Que ocupe todo el ancho disponible */
+    text-align: center; /* Todo el texto bien centradito */
+    padding: 25px 0; /* Altura interior arriba y abajo para que respire */
+    border-bottom: 3px solid #fdcb6e; /* Rayita dorada abajo para separar de la barra de menú */
+    box-sizing: border-box; /* Para que el padding no engorde el ancho total del bloque */
+}
+
+/* El letrero tocho del título */
+#header strong {
+    font-family: 'UnifrakturCook', cursive, serif; /* Fuente gótica medieval sacada de Google Fonts */
+    font-size: 65px; /* Letra bien hermosa y visible */
+    letter-spacing: 2px; /* Un poco de separación entre letras para que se entienda mejor */
+    color: #2d3436; /* Color casi negro para que destaque a tope */
+    display: block; /* Se comporta como un bloque entero y se adueña de su propia línea */
+}
+
+/* La frasecita que va debajo del título */
+#header span {
+    font-size: 16px; /* Tamaño normalito de lectura */
+    font-style: italic; /* En cursiva para que quede más poético */
+    color: #636e72; /* Gris medio discreto */
+}
+
+/* La barra negra del menú */
+#cssmenu {
+    background-color: #2d3436; /* Fondo gris pizarra muy oscuro */
+    text-transform: uppercase; /* Todo en mayúsculas como las webs serias */
+    font-size: 14px; /* Tamaño comedido para que quepan todos los botones */
+}
+
+/* La lista donde metemos los botones del menú */
+#cssmenu > ul {
+    list-style-type: none; /* Adiós a los puntitos y viñetas de lista */
+    margin: 0; /* Sin margen exterior */
+    padding: 0; /* Sin relleno interior */
+    background: #2d3436; /* Mismo fondo oscuro de la barra */
+}
+
+/* Cada uno de los botones principales del menú */
+#cssmenu > ul > li {
+    display: inline-block; /* Los ponemos uno al lado del otro en horizontal */
+    position: relative; /* Clave: sirve de ancla para que el submenú sepa dónde caer */
+}
+
+/* El texto y enlace de cada botón */
+#cssmenu > ul > li > a {
+    display: block; /* Para que sea pinchable todo el botón y no solo la letrita */
+    padding: 14px 20px; /* Espacio cómodo para dar clic sin apuntar con lupa */
+    text-decoration: none; /* Quitamos el subrayado azul feo de los enlaces */
+    color: #dfe6e9; /* Texto blanco grisáceo legible */
+    font-weight: bold; /* En negrita para que tenga presencia */
+}
+
+/* Cuando pasas el ratón por encima o estás en esa página */
+#cssmenu > ul > li > a:hover,
+#cssmenu > ul > li.active > a {
+    background-color: #d63031; /* Fondo rojo pasión al poner la flecha encima */
+    color: #ffffff; /* Texto en blanco puro */
+}
+
+/* El menú secreto que cae hacia abajo */
+#cssmenu > ul li.has-sub ul {
+    display: none; /* Escondido de entrada para no estorbar */
+    position: absolute; /* Flotando libre respecto a su botón padre */
+    top: 100%; /* Empieza justo debajo de donde termina la barra */
+    left: 0; /* Alineado al milímetro a la izquierda del botón */
+    width: 220px; /* Ancho fijo para que no se arrugue el texto */
+    margin: 0; /* Cero margen */
+    padding: 0; /* Cero relleno */
+    list-style-type: none; /* Tampoco queremos puntitos aquí */
+    background-color: #ffffff; /* Fondo blanco para las opciones secundarias */
+    border: 1px solid #dcdde1; /* Borde gris fino para marcar límites */
+    z-index: 1000; /* Lo subimos a la capa más alta para que no lo tape nada */
+}
+
+/* La magia: cuando el ratón pasa por encima, el menú oculto se muestra */
+#cssmenu > ul li.has-sub:hover ul {
+    display: block; /* Se hace visible al instante */
+}
+
+/* Los enlaces de los submenús */
+#cssmenu > ul li.has-sub ul li a {
+    display: block; /* Cada subopción ocupa toda su fila */
+    padding: 10px 15px; /* Margen interior agradable */
+    text-decoration: none; /* Sin subrayados */
+    color: #2f3640; /* Letras oscuras sobre el fondo blanco */
+    font-size: 13px; /* Un pelín más pequeña que los botones principales */
+    border-bottom: 1px solid #f1f2f6; /* Línea suave entre opción y opción */
+}
+
+/* Cuando pasas el ratón por una opción del desplegable */
+#cssmenu > ul li.has-sub ul li a:hover {
+    background-color: #ff7675; /* Tono salmón/rojizo claro */
+    color: #ffffff; /* Letras blancas para contrastar */
+}
+
+/* La zona del medio donde metemos las dos columnas */
+#middle {
+    width: 100%; /* Todo el ancho del contenedor */
+    background-color: #ffffff; /* Fondo blanco */
+    overflow: hidden; /* Truco del almendruco: contiene los floats de dentro sin romperse */
+}
+
+/* La columna gorda de la izquierda con todo el rollo principal */
+#content {
+    width: 680px; /* Ancho holgado para meter texto, fotos y formularios */
+    float: left; /* Flota hacia la izquierda */
+    padding: 20px; /* Espacio para que el texto no se pegue a las esquinas */
+    box-sizing: border-box; /* El padding no altera los 680px */
+    background-color: #fafafa; /* Fondo grisáceo casi imperceptible */
+}
+
+/* La columna estrecha de la derecha */
+#sideRight {
+    float: left; /* Flota pegada justo a la derecha del #content */
+    width: 280px; /* Lo que queda para llegar a los 960px (680 + 280) */
+    background: #ffeaa7; /* Fondo amarillento a juego con el header */
+    padding: 20px; /* Relleno interior */
+    box-sizing: border-box; /* Ancho cuadrado y exacto */
+    border-left: 2px dashed #e17055; /* Línea discontinua naranja como de recortable */
+}
+
+/* Cajas para envolver fotos y vídeos */
+.media-box {
+    margin: 15px 0; /* Separación vertical con los textos */
+    text-align: center; /* Todo lo que haya dentro bien centrado */
+}
+
+/* Ajustes para que las fotos no se desmadren */
+.media-box img {
+    max-width: 100%; /* Que no se salga nunca de su cajón */
+    height: auto; /* Mantiene la proporción sin aplastar la imagen */
+    border-radius: 6px; /* Bordes curvados modernos */
+    border: 2px solid #b2bec3; /* Un marquito gris suave */
+}
+
+/* Ajustes para el reproductor de vídeo */
+.media-box video {
+    width: 100%; /* Que llene todo el ancho disponible */
+    border-radius: 6px; /* Esquinas suavizadas */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombrita para que parezca una pantalla de cine */
+}
+
+/* El cajón del formulario de pedidos */
+.custom-form {
+    background: #ffffff; /* Fondo blanco limpio */
+    padding: 15px; /* Espacio interior para los campos */
+    border: 1px solid #dfe6e9; /* Marco gris clarito */
+    border-radius: 6px; /* Esquinas redondeadas */
+    margin-top: 15px; /* Separación con lo de arriba */
+}
+
+/* Los textos que van encima de cada casilla del formulario */
+.custom-form label {
+    display: block; /* Cada etiqueta en su propia línea */
+    margin-bottom: 5px; /* Un poco de distancia con su casilla */
+    font-weight: bold; /* Letra gruesa */
+}
+
+/* Todos los tipos de campos donde el usuario escribe o elige archivos */
+.custom-form input[type="text"],
+.custom-form input[type="email"],
+.custom-form input[type="file"],
+.custom-form textarea,
+.custom-form select {
+    width: 100%; /* Ocupan todo el ancho del formulario */
+    padding: 8px; /* Hueco cómodo para escribir */
+    margin-bottom: 12px; /* Espacio con la siguiente casilla */
+    border: 1px solid #ccc; /* Bordecillo gris */
+    border-radius: 4px; /* Bordes ligeramente curvos */
+    box-sizing: border-box; /* No revienta los márgenes al meter padding */
+}
+
+/* El botón rojo de enviar el pedido */
+.custom-form button {
+    background-color: #d63031; /* Rojo llamativo */
+    color: #fff; /* Texto blanco */
+    padding: 10px 18px; /* Tamaño generoso para pulsar */
+    border: none; /* Sin borde metálico feo */
+    border-radius: 4px; /* Esquinas redonditas */
+    cursor: pointer; /* Cambia el cursor a la manita que señala */
+    font-size: 14px; /* Tamaño de letra legible */
+    font-weight: bold; /* Letra en negrita */
+}
+
+/* Cuando pones el ratón sobre el botón de enviar */
+.custom-form button:hover {
+    background-color: #b71540; /* Rojo más oscuro para dar sensación de pulsación */
+}
+
+/* La tabla de precios */
+.tarifa-table {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Une los bordes dobles en una sola línea */
+    margin: 15px 0; /* Margen arriba y abajo */
+}
+
+/* Celdas normales y cabeceras de la tabla */
+.tarifa-table th, .tarifa-table td {
+    border: 1px solid #dcdde1; /* Línea divisoria gris */
+    padding: 10px; /* Espacio para que los datos no se apelotonen */
+    text-align: left; /* Alineado a la izquierda */
+}
+
+/* La fila de cabecera de la tabla */
+.tarifa-table th {
+    background-color: #2d3436; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Filas alternas de la tabla para leer mejor */
+.tarifa-table tr:nth-child(even) {
+    background-color: #f1f2f6; /* Gris muy clarito en las filas pares */
+}
+
+/* El pie de página de abajo del todo */
+#footer {
+    width: 100%; /* Ocupa todo el ancho */
+    clear: both; /* Limpia los floats para no montarse encima de las columnas */
+    background: #2d3436; /* Mismo fondo oscuro de la cabecera/menú */
+    color: #dfe6e9; /* Texto claro */
+    text-align: center; /* Todo centrado */
+    padding: 20px 0; /* Altura interior */
+    font-size: 13px; /* Letra discreta para créditos */
+}
+
+/* Los textos en negrita dentro del pie */
+#footer strong {
+    color: #fab1a0; /* Tono melocotón claro para destacar */
+}
+
+/* Párrafos del pie de página */
+#footer p {
+    margin: 6px 0; /* Separación vertical entre frases */
+    line-height: 1.4; /* Espaciado entre líneas para no apelmazar el texto */
+}
+
+/* El cajón que guarda los tres logos de redes */
+#footer .footer-redes {
+    margin: 12px 0; /* Aire arriba y abajo para que los iconos no se peguen al texto */
+    text-align: center; /* Deja los iconos en el centro exacto */
+}
+
+/* Cada uno de los iconos de redes sociales */
+#footer .footer-redes img {
+    width: 32px; /* Tamaño cuadrado fijo */
+    height: 32px; /* Altura fija idéntica */
+    object-fit: contain; /* Para que el logo no se deforme ni se achate */
+    margin: 0 8px; /* Espacio a los lados entre logo y logo */
+    vertical-align: middle; /* Alineados todos a la misma altura */
+    display: inline-block; /* Se colocan en hilera */
+    border-radius: 6px; /* Esquinas redondeadas */
+    transition: transform 0.2s ease; /* Efecto elástico suave */
+}
+
+/* Efecto cuando pasas la flecha sobre un logo de red social */
+#footer .footer-redes img:hover {
+    transform: scale(1.15); /* Crece un 15% como si saltara */
+}

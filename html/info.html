@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Idioma y codificacion estandar para que no fallen tildes ni caracteres espanoles -->
+    <meta charset="UTF-8">
+    <!-- Titulo de la pestana para que el usuario sepa que esta viendo el proceso -->
+    <title>Información - Cuentos Mágicos</title>
+    <!-- Enlazamos la hoja de estilos compartida -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Fuente gotica medieval de Google Fonts para la cabecera -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenedor central que envuelve toda la pagina -->
+    <div id="wrapper">
+        
+        <!-- Cabecera principal con titulo y subtitulo explicativo -->
+        <div id="header">
+            <strong>Cuentos Mágicos</strong>
+            <br>
+            <span>Todo sobre nuestro proceso creativo y de producción</span>
+        </div>
+
+        <!-- Barra de navegacion con Informacion marcada como activa -->
+        <div id="cssmenu">
+            <ul>
+                <!-- La pestana donde estamos ahora mismo metidos (Inicio) -->
+                <li><a href="../index.html"><span>Inicio</span></a></li>
+                <!-- Pestana con desplegable para explicar la info por dentro -->
+                <li class="has-sub"><a href="info.html" class="active"><span>Información</span></a>
+                    <ul>
+                        <li><a href="info.html#como-funciona"><span>¿Cómo funciona?</span></a></li>
+                        <li><a href="info.html#estilos"><span>Estilos de ilustración</span></a></li>
+                        <li class="last"><a href="info.html#formatos"><span>Formatos impresos y PDF</span></a></li>
+                    </ul>
+                </li>
+                <!-- Pestana con desplegable para ver fotos y videos de muestra -->
+                <li class="has-sub"><a href="galeria.html"><span>Galería</span></a>
+                    <ul>
+                        <li><a href="galeria.html#ejemplos-fotos"><span>Fotos transformadas</span></a></li>
+                        <li class="last"><a href="galeria.html#muestras-video"><span>Vídeo demostraciones</span></a></li>
+                    </ul>
+                </li>
+                <!-- El boton para ir a ver cuanto cuesta la broma -->
+                <li><a href="tarifas.html"><span>Tarifas</span></a></li>
+                <!-- El ultimo boton por si alguien nos quiere mandar un mensaje -->
+                <li class="last"><a href="contacto.html"><span>Contacto</span></a></li>
+            </ul>
+        </div>
+
+        <!-- Zona central repartida en dos columnas -->
+        <div id="middle">
+            
+            <!-- Columna izquierda: Explicacion paso a paso de como se hace el libro -->
+            <div id="content">
+                <!-- Seccion 1: El paso a paso del encargo -->
+                <h2 id="como-funciona">¿Cómo funciona el proceso?</h2>
+1.                 <p>
+<strong>Envío de la foto:</strong> Seleccionas una foto nítida de la persona o mascota que quieres caracterizar.</p>
+                <p>2. <strong>Adaptación gráfica:</strong> Nuestros ilustradores aplican el estilo de pintura digital preservando los rasgos clave (color de ojos, sonrisa y peinado).</p>
+                <p>3. <strong>Redacción del guion:</strong> Integramos sus aficiones, su nombre y la dedicatoria en una aventura con moraleja adaptada a la edad.</p>
+
+                <!-- Foto del taller digital con tableta grafica -->
+                <div class="media-box">
+                    <img src="../images/img3.jpeg" alt="Proceso paso a paso img3">
+                </div>
+
+                <!-- Seccion 2: Estilos artisticos disponibles -->
+                <h2 id="estilos">Estilos de ilustración disponibles</h2>
+                <ul>
+                    <li><strong>Acuarela Clásica:</strong> Ideal para cuentos de cuna y niños de 0 a 4 años.</li>
+                    <li><strong>Animación 3D:</strong> Acabado moderno tipo película de animación digital.</li>
+                    <li><strong>Cómic/Aventura:</strong> Para lectores a partir de 8 años o adultos amantes de la fantasía.</li>
+                </ul>
+
+                <!-- Seccion 3: Opciones de papel y encuadernacion -->
+                <h2 id="formatos">Formatos de entrega</h2>
+                <p>Ofrecemos tanto entrega física en papel couché de 200 g/m² con encuadernación cosida en tapa dura, como entrega inmediata en PDF vectorial de alta resolución listo para imprimir o leer en tableta.</p>
+            </div>
+
+            <!-- Columna derecha: Video explicativo y consejos para la foto -->
+            <div class="sidebar" id="sideRight">
+                <h3>Vídeo explicativo</h3>
+                <p>Descubre el proceso de creación en detalle:</p>
+                
+                <!-- Reproductor del segundo video con su portada asignada -->
+                <div class="media-box">
+                    <video controls>
+                        <source src="../images/video2.mp4" type="video/mp4">
+                        Tu navegador no soporta vídeo.
+                    </video>
+                </div>
+                
+                <hr>
+                <!-- Consejo practico para que el cliente no mande fotos borrosas -->
+                <strong>¿Dudas con la foto?</strong>
+                <p>Envíanos una toma bien iluminada, sin gafas de sol ni filtros de redes sociales para capturar la mejor expresión.</p>
+            </div>
+
+        </div>
+
+        <!-- Pie de pagina unificado con iconos de redes sociales centrados -->
+        <div id="footer">
+            <p><strong>Cuentos Mágicos Personalizados</strong> 2026. Todos los derechos reservados.</p>
+            <div class="footer-redes">
+                <a href="https://www.instagram.com" target="_blank" >
+                    <img src="../images/Instagramlogo.svg.webp" >
+                </a>
+                <a href="https://www.tiktok.com" target="_blank" >
+                    <img src="../images/TikTokLogo.png" >
+                </a>
+                <a href="https://www.facebook.com" target="_blank" >
+                    <img src="../images/facebooklogo.jpg" >
+                </a>
+            </div>
+            <p>Tus fotos son procesadas de forma privada y segura exclusivamente para la maquetación de tu encargo.</p>
+        </div>
+
+    </div>
+</body>
+</html>

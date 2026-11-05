@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto y Dudas - Cuentos Mágicos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        
+        <div id="header">
+            <strong>Cuentos Mágicos</strong>
+            <br>
+            <span>Estamos aquí para ayudarte a diseñar el mejor regalo</span>
+        </div>
+
+        <!-- Menu con la pestana de Contacto activa -->
+        <div id="cssmenu">
+            <ul>
+                <!-- La pestana donde estamos ahora mismo metidos (Inicio) -->
+                <li><a href="../index.html"><span>Inicio</span></a></li>
+                <!-- Pestana con desplegable para explicar la info por dentro -->
+                <li class="has-sub"><a href="info.html"><span>Información</span></a>
+                    <ul>
+                        <li><a href="info.html#como-funciona"><span>¿Cómo funciona?</span></a></li>
+                        <li><a href="info.html#estilos"><span>Estilos de ilustración</span></a></li>
+                        <li class="last"><a href="info.html#formatos"><span>Formatos impresos y PDF</span></a></li>
+                    </ul>
+                </li>
+                <!-- Pestana con desplegable para ver fotos y videos de muestra -->
+                <li class="has-sub"><a href="galeria.html"><span>Galería</span></a>
+                    <ul>
+                        <li><a href="galeria.html#ejemplos-fotos"><span>Fotos transformadas</span></a></li>
+                        <li class="last"><a href="galeria.html#muestras-video"><span>Vídeo demostraciones</span></a></li>
+                    </ul>
+                </li>
+                <!-- El boton para ir a ver cuanto cuesta la broma -->
+                <li><a href="tarifas.html"><span>Tarifas</span></a></li>
+                <!-- El ultimo boton por si alguien nos quiere mandar un mensaje -->
+                <li class="last"><a href="contacto.html" class="active"><span>Contacto</span></a></li>
+            </ul>
+        </div>
+
+        <div id="middle">
+            
+            <!-- Columna principal con formulario de consultas personalizadas -->
+            <div id="content">
+                <h2>¿Tienes una petición especial?</h2>
+                <p>Si quieres incluir más de dos personajes, crear un cuento empresarial o pedir una temática a medida, rellena el siguiente formulario:</p>
+
+                <!-- Formulario estructurado para dudas y pedidos a medida -->
+                <form class="custom-form" action="#" method="post">
+                    <label for="nombre-contacto">Tu nombre y apellidos:</label>
+                    <input type="text" id="nombre-contacto" name="nombre" placeholder="Ej: Carlos Gómez" required>
+
+                    <label for="email-contacto">Correo electrónico:</label>
+                    <input type="email" id="email-contacto" name="email" placeholder="ejemplo@correo.com" required>
+
+                    <label for="mensaje">Cuéntanos tu idea:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Me gustaría un cuento donde aparezca mi abuelo y mi sobrino juntos en su huerto."></textarea>
+
+                    <button type="submit">Enviar Consulta</button>
+                </form>
+            </div>
+
+            <!-- Columna lateral con horarios y mi foto trabajando en el estudio (img9) -->
+            <div class="sidebar" id="sideRight">
+                <h3>Atención directa</h3>
+                <p><strong>Email:</strong> contacto@cuentosmagicos.es</p>
+                <p><strong>Horario:</strong> Lunes a Viernes de 9:00 a 18:00</p>
+                <hr>
+                <!-- Mi foto personalizada en el puesto de trabajo del estudio -->
+                <div class="media-box">
+                    <img src="../images/img9.jpeg">
+                </div>
+                <small>Equipo de ilustración y maquetación digital de Cuentos Mágicos.</small>
+            </div>
+
+        </div>
+
+        <!-- Pie de pagina con creditos e iconos sociales -->
+        <div id="footer">
+            <p><strong>Cuentos Mágicos Personalizados</strong> 2026. Todos los derechos reservados.</p>
+            <div class="footer-redes">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../images/Instagramlogo.svg.webp">
+                </a>
+                <a href="https://www.tiktok.com" target="_blank">
+                    <img src="../images/TikTokLogo.png">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../images/facebooklogo.jpg">
+                </a>
+            </div>
+            <p>Tus fotos son procesadas de forma privada y segura exclusivamente para la maquetación de tu encargo.</p>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarifas y Packs - Cuentos Mágicos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        
+        <div id="header">
+            <strong>Cuentos Mágicos</strong>
+            <br>
+            <span>Planes transparentes adaptados a cada ocasión</span>
+        </div>
+
+        <!-- Menu con Tarifas activa -->
+        <div id="cssmenu">
+            <ul>
+                <!-- La pestana donde estamos ahora mismo metidos (Inicio) -->
+                <li><a href="../index.html"><span>Inicio</span></a></li>
+                <!-- Pestana con desplegable para explicar la info por dentro -->
+                <li class="has-sub"><a href="info.html"><span>Información</span></a>
+                    <ul>
+                        <li><a href="info.html#como-funciona"><span>¿Cómo funciona?</span></a></li>
+                        <li><a href="info.html#estilos"><span>Estilos de ilustración</span></a></li>
+                        <li class="last"><a href="info.html#formatos"><span>Formatos impresos y PDF</span></a></li>
+                    </ul>
+                </li>
+                <!-- Pestana con desplegable para ver fotos y videos de muestra -->
+                <li class="has-sub"><a href="galeria.html"><span>Galería</span></a>
+                    <ul>
+                        <li><a href="galeria.html#ejemplos-fotos"><span>Fotos transformadas</span></a></li>
+                        <li class="last"><a href="galeria.html#muestras-video"><span>Vídeo demostraciones</span></a></li>
+                    </ul>
+                </li>
+                <!-- El boton para ir a ver cuanto cuesta la broma -->
+                <li><a href="tarifas.html" class="active"><span>Tarifas</span></a></li>
+                <!-- El ultimo boton por si alguien nos quiere mandar un mensaje -->
+                <li class="last"><a href="contacto.html"><span>Contacto</span></a></li>
+            </ul>
+        </div>
+
+        <div id="middle">
+            
+            <!-- Columna principal: Tabla comparativa de precios y packs -->
+            <div id="content">
+                <h2>Tabla comparativa de planes</h2>
+                <p>Elige la opción que mejor encaje con tu sorpresa:</p>
+
+                <!-- Tabla con bordes limpios sencillita -->
+                <table class="tarifa-table">
+                    <thead>
+                        <tr>
+                            <th>Plan</th>
+                            <th>Formato</th>
+                            <th>Páginas</th>
+                            <th>Tiempo entrega</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Digital Mágico</strong></td>
+                            <td>PDF en alta resolución</td>
+                            <td>24 páginas</td>
+                            <td>48 horas</td>
+                            <td>19,90 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tapa Blanda</strong></td>
+                            <td>Impreso 21x21 cm</td>
+                            <td>28 páginas</td>
+                            <td>5-7 días laborables</td>
+                            <td>34,90 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tapa Dura Deluxe</strong></td>
+                            <td>Cartoné 25x25 cm + PDF</td>
+                            <td>36 páginas</td>
+                            <td>5-7 días laborables</td>
+                            <td>49,90 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pack Gemelos / Pareja</strong></td>
+                            <td>2 personajes en tapa dura</td>
+                            <td>40 páginas</td>
+                            <td>7 días laborables</td>
+                            <td>64,90 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Foto de los packs listos para regalo con lazo -->
+                <div class="media-box">
+                    <img src="../images/img8.jpeg" alt="Muestra de packs para regalo img8">
+                </div>
+            </div>
+
+            <!-- Columna lateral: Ventajas de envio y video unboxing -->
+            <div class="sidebar" id="sideRight">
+                <h3>Envío gratuito</h3>
+                <p>Todos los pedidos físicos tienen envío estándar gratuito a la Península.</p>
+                <hr>
+                <h4>Unboxing Deluxe</h4>
+                
+                <!-- Cuarto video mostrando el desempaquetado del pedido -->
+                <div class="media-box">
+                    <video controls>
+                        <source src="../images/video3.mp4" type="video/mp4">
+                        Tu navegador no soporta vídeo.
+                    </video>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Pie de pagina comun -->
+        <div id="footer">
+            <p><strong>Cuentos Mágicos Personalizados</strong> 2026. Todos los derechos reservados.</p>
+            <div class="footer-redes">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../images/Instagramlogo.svg.webp" >
+                </a>
+                <a href="https://www.tiktok.com" target="_blank">
+                    <img src="../images/TikTokLogo.png" >
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../images/facebooklogo.jpg" >
+                </a>
+            </div>
+            <p>Tus fotos son procesadas de forma privada y segura exclusivamente para la maquetación de tu encargo.</p>
+        </div>
+
+    </div>
+</body>
+</html>
